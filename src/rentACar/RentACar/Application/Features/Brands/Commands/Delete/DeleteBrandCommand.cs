@@ -17,7 +17,7 @@ namespace Application.Features.Brands.Commands.Delete;
         public Guid Id { get; set; }
         public string CacheKey => "";
         public bool ByPassCache => false;
-
+  
         public string? CacheGroupKey => "GetBrands";
 
         public class DeleteBrandCommandHandler :IRequestHandler<DeleteBrandCommand,DeletedBrandResponse>
@@ -25,7 +25,7 @@ namespace Application.Features.Brands.Commands.Delete;
             private readonly IMapper _mapper;
             private readonly IBrandRepository _brandRepository;
 
-
+        
             public DeleteBrandCommandHandler(IMapper mapper, IBrandRepository brandRepository)
             {
                 _mapper = mapper;
